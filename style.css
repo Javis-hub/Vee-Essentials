@@ -1,1 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
+ul,li{
+    list-style-type: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.space{
+    padding: 10px 4%;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+    height: 100vh;
+    padding-top: 3rem;
+    transition: .4s;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    transition: .4s ease;
+}
+
+.header-first{
+    display: flex; 
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo{
+    text-align: justify;
+}
+
+.logo a{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.logo a img{
+    display: block;
+    max-width: 5rem;
+    filter: brightness(.5);
+}
+
+.nav-list{
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: .4s;
+}
+
+.nav-list button{
+    display: none;
+}
+
+.nav-list li a{
+    transition: .3s ease-in-out;
+}
+
+.nav-icons{
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-icons i{
+    margin-left: .4rem;
+    font-size: 1.3em;
+    font-weight: 700;
+    align-items: center;
+    display: flex;
+}
+
+.nav-icons button{
+    padding: .5rem 1rem;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.nav-icons p{
+    display: none;
+}
+
+.nav-icons button:hover{
+    background-color: #000000c8;
+}
+
+#close{
+    display: none;
+}
+
+.hero-bttn button:hover > i{
+    color: #fff;
+    transition: .4s all;
+    animation: rotate .7s linear forwards;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.hero-bttn button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 834px){
+    .nav-list{
+        display: flex;
+        position: absolute;
+        background-color: #000;
+        flex-direction: column;
+        padding: 4rem .9rem;
+        width: 100%;
+        top: 0;
+        right: 100%;
+        height: 100vh;
+        z-index: 3;
+    }
+
+
+    .active{
+        right: 0;
+    }
+
+    .nav-list li{
+        display: block;
+        width: 100%;
+        border: 1.5px dotted #fd9903;
+        padding: 1rem 0;
+        transition: .3s all;
+    }
+
+    .nav-list li:hover{
+        background-color: #272626c6;
+        transform: scale(1.04);
+    }
+
+    .nav-list li:hover > a{
+        color: #fd9903;
+    }
+
+    .nav-list li a{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        color: #fff;
+        isolation: isolate;
+        padding-bottom: .2rem;
+    }
+
+    .nav-list button{
+        display: block;
+        width: 100%;
+        padding: .8rem;
+        border: .2rem dotted #fd9903;
+        background-color: #000;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 1.1em;
+        transition: .2s ease-in-out;
+    }
+
+    .nav-list button:hover{
+        color: #000;
+        background-color: #fd9903;
+    }
+    
+    #close{
+        display: block;
+        position: absolute;
+        z-index: 5;
+        color: #fd9903;
+        top: .8rem;
+        right: 1rem;
+    }
+    
+
+    #close i{
+        font-size: 1.7em;
+    }
+
+    #close:hover{
+        transition: .4s all;
+        animation: roll .7s linear forwards;
+    }
+    
+    @keyframes roll {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    .nav-icons p{
+        display: inline-block;
+    }
+
+    .nav-icons p i{
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-icons button{
+        display: none;
+    }
+}
