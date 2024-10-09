@@ -535,7 +535,6 @@ swiper-container {
 .bg-details{
     position: absolute;
     padding-inline: 1rem;
-    top: 53%;
   }
 
   .bg-details h1{
