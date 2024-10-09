@@ -259,7 +259,7 @@ swiper-container {
 }
 
 .bg-one{
-    background-image: url(bg/bg-1.png);
+    background-image: url(/bg/bg-1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -267,7 +267,7 @@ swiper-container {
 }
 
 .bg-two{
-    background-image: url(bg/jessica-felicio-QS9ZX5UnS14-unsplash.jpg);
+    background-image: url(/bg/jessica-felicio-QS9ZX5UnS14-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -275,7 +275,7 @@ swiper-container {
 }
 
 .bg-three{
-    background-image: url(bg/daniel-fazio-kdN4ntxNxKA-unsplash.jpg);
+    background-image: url(/bg/daniel-fazio-kdN4ntxNxKA-unsplash.jpg);
     filter: grayscale(9);
     background-position: center;
     background-repeat: no-repeat;
