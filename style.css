@@ -511,6 +511,9 @@ swiper-container {
 }
 
 @media (max-width: 768px){
+    .logo a img{
+    max-width: 4rem;
+}
     
 .loader .dot:nth-child(1){
     font-size: .9em;
@@ -559,6 +562,15 @@ swiper-container {
     
     .loader .dot:nth-child(4){
         font-size: 1.2em;
+    } 
+
+    .hero{
+        height: 80vh;
+    }
+
+    .bg-one{
+        background-size: 1000px;
+        background-position: top;
     } 
 
     #sect h2{
