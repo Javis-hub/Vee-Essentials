@@ -26,6 +26,78 @@ body{
     transition: .4s;
 }
 
+
+#preloader{
+    position: fixed;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.loader{
+    position: absolute;
+    font-size: 3em;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+    transition: .6s;
+}
+
+.loader .dot{
+    position: relative;
+    display: inline-block;
+    animation: slow 1s ease-in-out infinite alternate;
+}
+
+
+@keyframes slow {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+.loader .dot:nth-child(1){
+    animation-delay: -0.25s;
+    color: red;
+    font-size: 1.2em;
+}
+
+.loader .dot:nth-child(2){
+    animation-delay: -0.37s;
+    color: rgb(0, 83, 130);
+    font-size: 1.2em;
+}
+
+.loader .dot:nth-child(3){
+    animation-delay: -0.24s;
+    color: rgb(4, 115, 46);
+    font-size: 1.2em;
+}
+
+.loader .dot:nth-child(4){
+    animation-delay: -0.60s;
+    color: #000000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: lowercase;
+    font-size: 2em;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -68,6 +140,10 @@ header{
     transition: .4s;
 }
 
+.nav-list input{
+    display: none;
+}
+
 .nav-list button{
     display: none;
 }
@@ -77,17 +153,24 @@ header{
 }
 
 .nav-icons{
-    display: inline-flex;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    gap: 1rem;
+    text-align: justify;
 }
 
 .nav-icons i{
-    margin-left: .4rem;
-    font-size: 1.3em;
-    font-weight: 700;
+    margin-left: .9rem;
+    font-size: 2em;
+    font-weight: 400;
     align-items: center;
     display: flex;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.nav-icons i:hover{
+    transform: scale(1.1);
 }
 
 .nav-icons button{
@@ -98,6 +181,7 @@ header{
     border-radius: 1rem;
     text-transform: capitalize;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin-left: .3rem;
     cursor: pointer;
     transition: .3s ease;
 }
@@ -114,11 +198,168 @@ header{
     display: none;
 }
 
-.hero-bttn button:hover > i{
+.hero{
+    height: 100vh;
+    position: relative;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+
+  .bg-details{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-inline: 2rem;
+    top: 70%;
+    bottom: 0;
+  }
+
+  .bg-details h1{
+    max-width: 65%;
+    font-size: 1.7em;
+    line-height: 1.1;
+  }
+
+  .bg-details p{
+    padding-bottom: .6rem;
+  }
+
+  .bg-bttn button{
+    text-align: center;
+    padding: .8rem 1rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: #ffa621;
+    color: #000;
+    transition: .5s all;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+
+  .bg-bttn button:hover > i{
     color: #fff;
     transition: .4s all;
     animation: rotate .7s linear forwards;
 }
+
+.bg-one{
+    background-image: url(bg/bg-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f9f9f9;
+}
+
+.bg-two{
+    background-image: url(bg/jessica-felicio-QS9ZX5UnS14-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f9f9f9;
+}
+
+.bg-three{
+    background-image: url(bg/daniel-fazio-kdN4ntxNxKA-unsplash.jpg);
+    filter: grayscale(9);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000000;
+}
+
+
+#sect{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#sect h2{
+    font-weight: 400;
+    font-size: 1.9rem;
+    text-decoration: underline;
+}
+
+.sect-item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+
+.sect-card{
+    width: 23%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sect-card img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.sect-card img:not(:hover){
+    transform: scale(.97);
+    filter: brightness(.7);
+}
+
+.sect-card a{
+    text-decoration: underline;
+}
+
+#sect button{
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #000000b2;
+    padding: .4rem 1.2rem;
+    font-size: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#sect button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    color: #fff;
+    z-index: -1;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #d6d6d6;
+    transition: right .6s ease;
+}
+
+#sect button:hover::after{
+    right: 0;
+}
+
+
+
 
 @keyframes rotate {
     0%{
@@ -128,7 +369,7 @@ header{
         transform: rotate(360deg);
     }
 }
-.hero-bttn button:hover{
+.bg-bttn button:hover{
     background-color: #000;
     color: #fff;
 }
@@ -137,43 +378,67 @@ header{
     .nav-list{
         display: flex;
         position: absolute;
-        background-color: #000;
+        background-color: #ffffff;
         flex-direction: column;
-        padding: 4rem .9rem;
+        padding: 5rem .9rem;
         width: 100%;
         top: 0;
-        right: 100%;
+        left: 100%;
+        opacity: 0;
         height: 100vh;
         z-index: 3;
+        transition: .6s;
     }
 
-
     .active{
-        right: 0;
+        left: 0;
+        opacity: 1;
+    }
+
+    .nav-list input{
+        display: flex;
+        width: 100%;
+        padding: 1rem .5rem;
+        background-color: rgba(0, 0, 0, .2);
+        border: 1.5px dotted #000;
+        outline: none;
+        border-radius: .7rem;
+        transition: .4s all;
+    }
+
+    ::placeholder {
+        color: #000000;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+
+    .nav-list input:hover{
+        transform: scale(.99);
     }
 
     .nav-list li{
         display: block;
         width: 100%;
-        border: 1.5px dotted #fd9903;
+        border: 1.5px dotted #000000;
+        border-radius: .7rem;
         padding: 1rem 0;
         transition: .3s all;
     }
 
     .nav-list li:hover{
-        background-color: #272626c6;
-        transform: scale(1.04);
+        background-color: rgba(0, 0, 0, .3);
+        transform: scale(.98);
     }
 
     .nav-list li:hover > a{
-        color: #fd9903;
+        color: #000000;
     }
 
     .nav-list li a{
         display: flex;
         justify-content: center;
         position: relative;
-        color: #fff;
+        color: #000000;
         isolation: isolate;
         padding-bottom: .2rem;
     }
@@ -182,31 +447,37 @@ header{
         display: block;
         width: 100%;
         padding: .8rem;
-        border: .2rem dotted #fd9903;
+        border: .2rem dotted #000000;
         background-color: #000;
         color: #fff;
         text-transform: capitalize;
         font-size: 1.1em;
+        border-radius: .7rem;
         transition: .2s ease-in-out;
     }
 
     .nav-list button:hover{
         color: #000;
-        background-color: #fd9903;
+        background-color: #ffffff;
     }
     
     #close{
         display: block;
         position: absolute;
         z-index: 5;
-        color: #fd9903;
-        top: .8rem;
+        color: #000000;
+        top: 1.8rem;
         right: 1rem;
+        cursor: pointer;
+    }
+
+    .nav-icons a{
+        display: none;
     }
     
 
     #close i{
-        font-size: 1.7em;
+        font-size: 2em;
     }
 
     #close:hover{
@@ -222,16 +493,91 @@ header{
             transform: rotate(360deg);
         }
     }
-    .nav-icons p{
+    #bar{
         display: inline-block;
     }
-
-    .nav-icons p i{
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
+    
     .nav-icons button{
         display: none;
     }
+
+    .sect-item{
+        flex-wrap: wrap;
+    }
+
+    .sect-card{
+        width: 23%;
+    }
+}
+
+@media (max-width: 768px){
+    
+.loader .dot:nth-child(1){
+    font-size: .9em;
+}
+
+.loader .dot:nth-child(2){
+    font-size: .9em;
+}
+
+.loader .dot:nth-child(3){
+    font-size: .9em;
+}
+
+.loader .dot:nth-child(4){
+    font-size: 1.3em;
+}
+}
+
+.bg-details{
+    position: absolute;
+    padding-inline: 1rem;
+    top: 53%;
+  }
+
+  .bg-details h1{
+    width: 100%;
+  }
+
+  .sect-card{
+    width: 40%;
+}
+
+
+@media (max-width: 480px) {
+    .loader .dot:nth-child(1){
+        font-size: .8em;
+    }
+    
+    .loader .dot:nth-child(2){
+        font-size: .8em;
+    }
+    
+    .loader .dot:nth-child(3){
+        font-size: .8em;
+    }
+    
+    .loader .dot:nth-child(4){
+        font-size: 1.2em;
+    } 
+
+    #sect h2{
+        font-size: 1.4rem;
+    }
+
+    .sect-item{
+        padding: 1rem 0;
+    }
+
+    .sect-card{
+        width: 43%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 325px){
+    .sect-card{
+        width: 100%;
+    }
+
 }
