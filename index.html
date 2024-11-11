@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1", minimum-scale="1, maximum-scale=1">
+    <link rel="stylesheet" href="style.css">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="stylesheet" href="swiper.min.css">
     <title>Vee Essentials</title>
 </head>
 <body>
-    <header class="space">
+    <header class="header padding">
         <div class="header-first">
             <div class="logo">
                 <a href="#"><img src="logo/vee cuts.png" alt="vee-cuts logo">ESSENTIALS</a>
@@ -29,30 +41,346 @@
         </div>
 
         <div class="nav-icons">
-            <p class="bag"><i class='bx bx-shopping-bag'></i></p>
+            <p class="bag">
+                <i class='bx bx-shopping-bag'></i>
+                <span id="increase">0</span>
+            </p>
             <button>login/register </button> 
             <p id="bar"><i class='bx bx-menu'></i></p>
             
         </div>
     </header>
 
-    <section class="hero">
+    <div class="intro padding">
+        <h1>WELCOME TO VEE ESSENTIALS</h1>
+    </div>
+
+    <section class="hero padding">
         <div class="hero-content">
-            <h1>Transform Your Look, Unlock Your Confidence!!</h1>
-            <p>From natural to bold, our wigs have got you covered</p>
-            <a href="" class="hero-cta">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+            <p>November 2024</p>
+            <h4>Men's New Arrivals</h4>
+            <p>New Colors, now also available in men's sizing</p>
+            <button>Buy Now</button>
         </div>
 
-        <div class="chat">
-            <a href="" class="place">Need Help? Chat with Us</a>
-            <a href=""><i class='bx bxl-whatsapp' ></i></a>
-            
+        <div class="hero-content">
+            <p>Limited Offer</p>
+            <h4>Love at First Wear</h4>
+            <p>Exclusive Offer: Free Shipping on All Bralettes</p>
+            <button onclick="window.location.href='/bralette shop.html'">Buy Now</button>
         </div>
     </section>
 
-    
+    <section class="main">
+        <h4>Shop By Category</h4>
 
-    <script src="/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-</body>
-</html>
+        <swiper-container class="mySwiper swiper-cat" init="false">
+            <swiper-slide card-1 style="background-image: linear-gradient(#00000030, #00000030), url(/bg/Brallete\ bg.jpeg);">
+                <div class="swiper-des" >
+                    <a href="">Brallete <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+            <swiper-slide card-2 style="background-image: linear-gradient(#00000030, #00000030), url(/bg/Shorts\ bg.jpeg);">
+                <div class="swiper-des">
+                    <a href="">Shorts <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+            <swiper-slide card-3 style="background-image: linear-gradient(#00000030, #00000030), url(/bg/Sweatshirts\ bg.jpeg);">
+                <div class="swiper-des">
+                    <a href="">Sweatshirts <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+            <swiper-slide card-4 style="background-image: linear-gradient(#00000030, #00000030), url(/bg/Shirts\ bg.jpeg);">
+                <div class="swiper-des">
+                    <a href="">Shirts <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+            <swiper-slide style="background-image: linear-gradient(#00000030, #00000030),  url(/bg/Wigs\ bg.jpeg);">
+                <div class="swiper-des">
+                    <a href="">Hair & Wig <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+            <swiper-slide style="background-image: linear-gradient(#00000030, #00000030),  url(/bg/watches\ bg.jpeg);">
+                <div class="swiper-des">
+                    <a href="">Watches <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+            <swiper-slide style="background-image: linear-gradient(#00000030, #00000030),  url(/bg/Shoes\ bg.jpeg);">
+                <div class="swiper-des">
+                    <a href="">Shoes <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+            <swiper-slide style="background-image: linear-gradient(#00000030, #00000030),  url(/bg/Dress\ bg.jpeg);">
+                <div class="swiper-des">
+                    <a href="">Female Dress <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+            <swiper-slide style="background-image: linear-gradient(#00000030, #00000030),  url(/bg/Pants\ bg.jpeg);">
+                <div class="swiper-des">
+                    <a href="">Pants <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </swiper-slide>
+          </swiper-container>
+    </section>
+
+  <section class="section">
+    <div class="section-card">
+        <div class="section-details">
+            <h1>women's store</h1>
+            <p>Uncover the latest fashion must-haves and essentials for the modern woman. Our Women's Shop offers a curated selection of products, including:
+            </p>
+            <span>
+            Clothing: Tops, dresses, pants, skirts, jackets, coats
+            Footwear: Heels, boots, sneakers, sandals, flats
+            Accessories:  Handbags, wallets, jewelry, hats, scarves
+
+            </span>
+            <button>Shop Now</button>
+        </div>
+
+        <img src="/bg/bg 5.png" alt="">
+    </div>
+
+    <div class="section-card">
+        <img src="/bg/bg 6.png" alt="">
+        
+
+        <div class="section-details">
+            <h1>men's store</h1>
+            <p>Discover the latest fashion trends and essentials for the modern man. Our Men's Shop offers a wide range of products, including:
+            </p>
+            <span>
+            Clothing: T-shirts, shirts, pants, jeans, jackets, hoodies
+            Footwear:  Sneakers, boots, loafers, sandals
+            Accessories:  Watches, sunglasses
+            </span>
+            <button>Shop Now</button>
+        </div>
+    </div>
+  </section>
+
+  <section class="activities">
+    <div class="activities-card">
+        <div class="act-col">
+            <span><i class="fa-regular fa-credit-card"></i></span>
+                <div class="act-col-des">
+                    <h4>Secure payment</h4>
+                    <p>Secure online payment</p>
+                </div> 
+        </div>
+        
+        <div class="act-col">
+            <span>
+                <i class="fa-solid fa-right-left"></i>
+            </span>
+           <div class="act-col-des">
+                <h4>7-14 days returns</h4>
+                <p>Money back guaranteed</p>
+           </div> 
+        </div>
+
+        <div class="act-col">
+            <span><i class='bx bx-like'></i></span>
+               <div class="act-col-des">
+                    <h4>Customer support</h4>
+                    <p>Available 24/7</p>
+               </div>    
+        </div>
+
+        <div class="act-col">
+            <span><i class='bx bx-package' style="font-weight: 300;"></i></span>
+           <div class="act-col-des">
+            <h4>Free delivery</h4>
+            <p>On all products over ₦ 100,000</p>
+           </div>  
+        </div>
+    </div>
+  </section>
+
+  <section class="sect padding">
+    <h2>BEST SELLERS</h2>
+    <div class="sect-item">
+        <div class="sect-card">
+            <img src="/products/bralette.png" alt="">
+            <a href="/bralette shop.html">Bralette Shop</a>
+        </div>
+
+        <div class="sect-card">
+            <img src="/products/Jewelry.png" alt="">
+            <a href="#for women">jewelry</a>
+        </div>
+
+        <div class="sect-card">
+            <img src="/products/Watches.png" alt="">
+            <a href="">Watches</a>
+        </div>
+
+        <div class="sect-card">
+            <img src="/products/Wigs.png" alt="">
+            <a href="">Wigs</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="discount padding">
+    <div class="discount-col">
+        <div class="discount-card height">
+
+        </div>
+        <div class="discount-content height">
+            <div class="discount-box">
+                <p>Limited Offer</p>
+                <h3>Black Friday sale - Up to 20%
+                    off all wigs</h3>
+                <p>November 15th - 31st</p>
+                <button>Pre-order Now</button>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="feedback padding">
+    <h4>What our customers are saying</h4>
+    
+    <div class="review-slider">
+
+        <div class="wrapper">
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Herientta</h5>
+                    <span>Benin City, Nigeria</span>
+                </div>
+                <p>Hey vee,your bralette is the best I’ve ever tried.It has soft molded cups that gives coverage and no excess padding,Very comfy,your brand is highly recommendable.</p>
+            </div>
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Edith</h5>
+                    <span>Benin City, Nigeria</span>
+                </div>
+                <p>My bralette is so fineeeee
+                    I love my shorts too 
+                   They fit perfectly</p>
+            </div>
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Osas</h5>
+                    <span>Benin City, Nigeria</span>
+                </div>
+                <p>Vee,my man loves the Cartier watch I got from you,hope to buy more from you</p>
+            </div>
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Grace</h5>
+                    <span>Benin City, Nigeria</span>
+                </div>
+                <p>My 14” curly wiggg Vicky! 
+                    It’s so natural-looking,soft to the touch and very easy to style.! The curls are bouncy and vibrant, I’m absolutely obsessed!</p>
+            </div>
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Herientta</h5>
+                    <span>Switzerland, Europe</span>
+                </div>
+                <p>Vee!!
+                    I so much love these braided wigs and bob wig you delivered to me.
+                    The braided wigs are super neat in terms of weave and stitch, the beads and lovely, quite affordable too.</p>
+            </div>
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Happines</h5>
+                    <span>Dubai, UAE</span>
+                </div>
+                <p>Wow, Vee..I must say the truth o, I doubted you before but ehn you beat my imaginations, I didn't expect you to deliver up to standard o that's why I was scared to make payment at first. Thank You so much vee</p>
+            </div>
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Chris</h5>
+                    <span>Edo State, Nigeria</span>
+                </div>
+                <p>Mama, I picked up the hair & wristwatch this morning.
+                    It's super soft, the length is exactly what I wanted to suit my job the closure everything is okay. For the wristwatch, it's screaming luxury, my brother liked it. Thank You Vee</p>
+            </div>
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Ella</h5>
+                    <span>Lagos, Nigeria</span>
+                </div>
+                <p>I received the jewelry, everything is shinning na you really dey sell all that glitters my boss and my aunty likes everything she said she'll like to buy one more wristwatch but that will be after her wedding since she's getting married by December and is using the jewelries and wristwatch for her pre-wedding shoot and traditional marriage.
+                    Thanks for the gift too XOXO</p>
+            </div>
+
+            <div class="slide">
+                <i class='bx bxs-quote-right'></i>
+                <div class="reviews">
+                    <h5>Evidence</h5>
+                    <span>Oyo, Nigeria</span>
+                </div>
+                <p>Vee, afa.
+                    This hair fine o I for add join, I'll be back Sha.
+                    My words can't exceed my emotions I dey regret wetin no make me buy the other one join. This curly wig dey burst my brain, when I did the maintenance come see curls, guy e jus dey shine, fluffy! Even cake sef no fluffy like this I love it!
+                    Thank you</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <script src="/script.js"></script>
+
+  <script src="/scroll.js"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+ 
+  
+ 
+    <script>
+     const swiperEl = document.querySelector('swiper-container')
+     Object.assign(swiperEl, {
+       slidesPerView: 1,
+       spaceBetween: 10,
+       autoplay: {
+         delay: 1500,
+       },
+       autoplayDisableOnInteraction: false,
+       loop: true,
+       breakpoints: {
+         480: {
+             slidesPerView: 1,
+             spaceBetween: 2,
+         },
+         640: {
+           slidesPerView: 2,
+           spaceBetween: 5,
+         },
+         768: {
+           slidesPerView: 3,
+           spaceBetween: 7,
+         },
+         1024: {
+           slidesPerView: 4,
+           spaceBetween: 7,
+         },
+       },
+     });
+     swiperEl.initialize();
+
+    </script>
+ 
+ </body>
+ </html>
+ 
