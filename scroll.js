@@ -57,9 +57,26 @@ ScrollReveal().reveal(".slide", {
     delay: 500,
 });
 
-ScrollReveal().reveal(".socials a", {
+ScrollReveal().reveal(".accordion-item", {
     ...scrollRevealOption,
-    duration: 1000,
-    interval: 500,
-    delay: 2200,
+    origin: "bottom",
+    delay: 700,
+});
+
+ScrollReveal().reveal(".subscribe", {
+    ...scrollRevealOption,
+    origin: "bottom",
+    delay: 800,
+}); 
+
+ScrollReveal().reveal(".about-image", {
+    ...scrollRevealOption,
+    origin: "left",
+    delay: 900,
+}); 
+
+ScrollReveal().reveal(".about-details", {
+    ...scrollRevealOption,
+    origin: "right",
+    delay: 600,
 }); 
