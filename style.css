@@ -881,13 +881,14 @@ swiper-container {
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        padding: .6rem .2rem 0;
+        padding: .6rem .5rem 0;
+        gap: .3rem;
     }
 
     .nav-list li a{
         position: relative;
         isolation: isolate;
-        padding: .9rem .2rem;
+        padding: .9rem .5rem;
         border-radius: .3rem;
     }
 
