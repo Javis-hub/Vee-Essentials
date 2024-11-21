@@ -1,0 +1,103 @@
+.title h1{
+    padding: .5rem 0 0;
+    font-size: 1.3em;
+}
+
+.title{
+    line-height: 1.1;
+}
+
+.catalogue-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2. 1fr);
+    padding: .4rem .9rem;
+    gap: .5rem;
+    margin: 1rem 0;
+    transition: .4s ease-in-out;
+}
+ 
+.box-card{
+    position: relative;
+    height: 450px;
+    transition: .3s linear;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .5rem;
+}
+
+.card-des{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+
+.box-card:nth-child(1){
+    background-image: url(/bg/Brallete\ bg.jpeg);
+}
+
+.box-card:nth-child(2){
+    background-image: url(/bg/Shorts\ bg.jpeg);
+}
+
+.box-card:nth-child(3){
+    background-image: url(/bg/Sweatshirts\ bg.jpeg);
+}
+
+.box-card:nth-child(4){
+    background-image: url(/bg/Shirts\ bg.jpeg);
+}
+
+.box-card:nth-child(5){
+    background-image: url(/bg/Wigs\ bg.jpeg);
+}
+
+.box-card:nth-child(6){
+    background-image: url(/bg/watches\ bg.jpeg);
+}
+
+.box-card:nth-child(7){
+    background-image: url(/bg/Shoes\ bg.jpeg);
+}
+
+.box-card:nth-child(8){
+    background-image: url(/bg/Dress\ bg.jpeg);
+}
+
+.box-card:nth-child(9){
+    background-image: url(/bg/Pants\ bg.jpeg);
+}
+@media (max-width: 834px){
+    .catalogue-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px){
+    .catalogue-box{
+        padding-inline: 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* .box-card{
+        height: 300px;
+    } */
+
+    .card-des a{
+        font-size: .8em;
+    }
+}
+
+@media (max-width: 330px){
+    .catalogue-box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box-card{
+        height: 350px;
+    }
+}
